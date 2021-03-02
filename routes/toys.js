@@ -50,7 +50,6 @@ router.get('/category/:catName', async (req, res) => {
 });
 //add post
 router.post("/" ,authToken,async (req, res) => {
-  // בדיקה בצד שרת שהמידע תקין לפני שמגיע למסד נתונים
   let validBody = validtoy(req.body);
   if (validBody.error) {
     return res.status(400).json(validBody.error.details);
